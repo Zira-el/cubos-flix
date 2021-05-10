@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+}
+
+.App{
+  --preto1: #0F1C26;
+  --braco: #FDFDFD;
+  --cor-de-texto: var(--braco);
+  --preto2: #171B1E;
+}
+
+/* header */
+
+.header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--preto1);
+  color: var(--cor-de-texto);
+  height: 6.5rem;
+}
+
+.favoritos, .promocoes, .perfil, .promocoes button, .favoritos button{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  background-color: inherit;
+  color: var(--cor-de-texto);
+}
+
+.perfil img{
+  max-width: 3.5rem;
+  max-height: 3.5rem;
+}
+
+.procura input{
+  background-color: var(--preto2);
+  width: 28.5rem;
+  height: 3rem;
+  padding-left: 0.81rem;
+  color: var(--braco);
+  font-size: 1rem;
+  border: 1px solid transparent;
+}
+
+.procura input:hover{
+  border: 1px solid var(--braco);
+}
+
+.procura button{
+  border: none;
+  position: relative;
+  right: 3.5rem;
+  top: 0.5rem;
+
+}
+
+button{
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.procura button img{
+  width: 1.5rem;
+  height: 1.5rem;
+}
