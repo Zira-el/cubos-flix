@@ -6,6 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   border: 0;
+  
 }
 
 .App{
@@ -17,9 +18,11 @@
   --cor-de-fundo-geral: var(--preto3);
   --branco2: #E5E5E5;
   --fundo-do-banner: var(--branco2);
-  --preto4:#0F0915;
+  --preto4:#07040ad2;
   --cor-de-texto-banner: var(--preto4);
+  --preto5: #0B1217;
 
+  font-family: 'Manrope', sans-serif;
   background-color: var(--cor-de-fundo-geral);
   min-height: 100vh;
 }
@@ -39,7 +42,6 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: 'Manrope', sans-serif;
   font-weight: 500;
   background-color: inherit;
   color: var(--cor-de-texto);
@@ -86,13 +88,15 @@ button{
 
 .principal{
   display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  gap: 3rem;
+  /* place-items: center; */
   place-content: center;
   margin-top: 1.5rem;
+  min-width: 58.5rem;
+  margin-left: 2rem;
 }
 
-.itens{
-  gap:1.5rem;
-}
 
 /* banner */
 
@@ -105,8 +109,8 @@ button{
   font-weight: 400;
   background-image: url(./imagens/bg-promotion.svg);
   background-repeat: round;
-  min-width: 58.5rem;
   min-height: 7.4rem;
+  min-width: 58.5rem;
 }
 
 .texto1, .texto2{
@@ -151,3 +155,64 @@ button{
 .texto2 h2{
   font-size: 1.5rem;
 } 
+
+/* carrinho */
+
+.carrinho{
+  display: grid;
+  place-items: stretch;
+  place-content: stretch;
+  gap: 2rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--braco1);
+}
+
+.topo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  min-width: 19.5rem;
+  min-height: 4.5rem;
+  font-weight: 700;
+  color: var(--cor-de-texto);
+  background-image: linear-gradient(0deg, #A785ED, #A785ED),
+  linear-gradient(0deg, #C4C4C4, #C4C4C4);
+}
+
+.vazio{
+  display: grid;
+  place-items: center;
+  gap: 0.37rem;
+  color: var(--cor-de-texto);
+  font-size: 1.1rem;
+}
+
+.vazio p{
+  font-size: 1rem;
+}
+
+.desconto{
+  display:grid;
+  place-content: center;
+  margin-bottom: 1rem;
+  gap:0.25rem;
+}
+
+.desconto > input{
+  background-color: var(--preto5);
+  width: 17.5rem;
+  height: 2.5rem;
+  padding-left: 0.81rem;
+}
+
+.desconto label{
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.desconto button{
+  position: relative;
+  bottom: 2.2rem;
+  left: 7.5rem;
+}

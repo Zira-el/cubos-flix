@@ -4,6 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      {/* header */}
       <div className="header">
         <button>
           <img className="logo" src="/logo.svg" alt="Voltar ao inicio" /> 
@@ -23,7 +24,6 @@ function App() {
                 <img src="/promotion-icon.svg" alt="Promoção" />
                 <p>Promoções</p>
               </button>
-            
             </div>
             <div className="perfil">
               <p>Bem vindo, Dina</p>
@@ -31,6 +31,7 @@ function App() {
             </div>
       </div>
 
+      {/* Principal */}
       <div className="principal">
         <div className="itens">
           <div className="banner">
@@ -40,7 +41,6 @@ function App() {
                 <img src="coupon-icon.svg" alt="#" />
                 <span>CUPOM: htmlnaoelinguagem</span>
               </div>
-              
             </div>
             <div className="texto2">
               <h2>FINALIZA EM:</h2>
@@ -48,15 +48,31 @@ function App() {
                 <img src="/time-icon.svg" alt="#" />
                 <span>00:04:52</span>
               </div>
-              
             </div>
             <div className="money">
               <img src="money.png" alt="#" />
             </div>
           </div>
+          <div className="filmes">
+        
+          </div>
         </div>
-        <div className="carrinho">
 
+        <div className="carrinho">
+          <div className="topo">
+            <img src="/bag-icon.svg" alt="#"/>
+            <h2>Sacola</h2>
+          </div>
+          <div className="vazio">
+            <h2>Sua sacola está vazia</h2>
+            <p>Adicione filmes agora</p>
+            <img src="person-illustration.svg" alt="Carrinho vazio" />
+          </div>
+          <div className="desconto">
+            <label for="cupomDeDesconto">Insira seu cupom</label>
+            <input type="text" placeholder="Cupom de desconto" id="cupmDeDesconto" />
+            <button><img src="/coupon-icon.svg" alt="Enviar cupom"/> </button>
+          </div>
         </div>
       </div>
     </div>
