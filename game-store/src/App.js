@@ -4,7 +4,6 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-
       <div className="header">
         <button>
           <img className="logo" src="/logo.svg" alt="Voltar ao inicio" /> 
@@ -32,7 +31,34 @@ function App() {
             </div>
       </div>
 
+      <div className="principal">
+        <div className="itens">
+          <div className="banner">
+            <div className="texto1">
+              <h2>APROVEITE AGORA</h2>
+              <div className="cupom">
+                <img src="coupon-icon.svg" alt="#" />
+                <span>CUPOM: htmlnaoelinguagem</span>
+              </div>
+              
+            </div>
+            <div className="texto2">
+              <h2>FINALIZA EM:</h2>
+              <div className="time">
+                <img src="/time-icon.svg" alt="#" />
+                <span>00:04:52</span>
+              </div>
+              
+            </div>
+            <div className="money">
+              <img src="money.png" alt="#" />
+            </div>
+          </div>
+        </div>
+        <div className="carrinho">
 
+        </div>
+      </div>
     </div>
   );
 }
