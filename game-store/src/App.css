@@ -6,7 +6,6 @@
   box-sizing: border-box;
   margin: 0;
   border: 0;
-  
 }
 
 .App{
@@ -21,10 +20,16 @@
   --preto4:#07040ad2;
   --cor-de-texto-banner: var(--preto4);
   --preto5: #0B1217;
+  --roxo: #A785ED;
+  --botoes-de-compra: var(--roxo);
+  --dourado: #FBCD6E;
+
+
 
   font-family: 'Manrope', sans-serif;
   background-color: var(--cor-de-fundo-geral);
   min-height: 100vh;
+  min-width: max-content;
 }
 
 /* header */
@@ -88,7 +93,7 @@ button{
 
 .principal{
   display: grid;
-  grid-template-columns: 1.5fr 0.8fr;
+  grid-template-columns: 1fr 0.4fr;
   gap: 3rem;
   /* place-items: center; */
   place-content: center;
@@ -110,7 +115,7 @@ button{
   background-image: url(./imagens/bg-promotion.svg);
   background-repeat: round;
   min-height: 7.4rem;
-  min-width: 58.5rem;
+  min-width: 58rem;
 }
 
 .texto1, .texto2{
@@ -160,11 +165,12 @@ button{
 
 .carrinho{
   display: grid;
-  place-items: stretch;
-  place-content: stretch;
   gap: 2rem;
+  place-content: strecth;
+  place-items: strecth;
   background-color: rgba(0, 0, 0, 0.2);
   color: var(--braco1);
+  /* max-width: max-content; */
 }
 
 .topo{
@@ -212,7 +218,66 @@ button{
 }
 
 .desconto button{
+  max-width: 18px;
   position: relative;
   bottom: 2.2rem;
-  left: 7.5rem;
+  left: 15rem;
+}
+
+/* Top Filmes */
+
+.topFilmes{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(10.5rem, 10.5rem));
+  grid-template-rows: 18.8rem;
+}
+
+.loja h2{
+  color: var(--cor-de-texto);
+  margin-bottom: 1rem;
+}
+
+.filmes{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image:  linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(./imagens/joker.png);
+  background-repeat: no-repeat;
+  min-width: inherit;
+}
+
+.favoritar{
+  margin-top: 8px;
+  margin-left: 5px;
+}
+
+.informacoes{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: var(--cor-de-texto);
+  font-weight: 700;
+  min-width: inherit;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.notas{
+  display:flex;
+  color: var(--dourado);
+  font-size: 12px;
+}
+
+.comprar{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 8px;
+  background-color: var(--botoes-de-compra);
+  color: var(--cor-de-texto);
+}
+
+.comprar p{
+  margin: 8px 4px;
+  font-size: 12px;
 }

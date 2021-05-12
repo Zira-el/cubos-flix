@@ -53,8 +53,29 @@ function App() {
               <img src="money.png" alt="#" />
             </div>
           </div>
-          <div className="filmes">
-        
+          <div className="loja">
+          <h2>Top Filmes</h2>
+            <div className="topFilmes">
+              <div className="filmes">
+                <div className="favoritar">
+                  <img src="./star.svg" alt="favoritar" />
+                </div>
+                <div>
+                <div className="informacoes">
+                  <p>Joker</p>
+                  <div className="notas">
+                    <img src="/golden-star.svg" alt="#"/>
+                    <p>8.8</p>
+                  </div>
+                </div>
+                <div className="comprar">
+                    <p>Sacola</p>
+                    <p>R$ 2,49</p>
+                </div>
+                </div>
+              </div>
+              
+            </div>
           </div>
         </div>
 
