@@ -23,7 +23,8 @@
   --roxo: #A785ED;
   --botoes-de-compra: var(--roxo);
   --dourado: #FBCD6E;
-
+  --rosa-violeta: #E183C8;
+  --rosa-violeta2:#f8d5ef;
 
 
   font-family: 'Manrope', sans-serif;
@@ -33,6 +34,9 @@
 }
 
 /* header */
+button{
+  cursor: pointer;
+}
 
 .header{
   display: flex;
@@ -41,6 +45,10 @@
   background-color: var(--preto1);
   color: var(--cor-de-texto);
   height: 6.5rem;
+}
+
+.logo{
+  background-color: transparent;
 }
 
 .favoritos, .promocoes, .perfil, .promocoes button, .favoritos button{
@@ -75,11 +83,11 @@
   border: none;
   position: relative;
   right: 3.5rem;
-  top: 0.5rem;
-
+  top: 0.5rem; 
+  background-color: transparent;
 }
 
-button{
+.promocoes button{
   background-color: transparent;
   cursor: pointer;
 }
@@ -104,6 +112,9 @@ button{
 
 
 /* banner */
+.clicado{
+  display: none;
+}
 
 .banner{
   display: flex;
@@ -170,6 +181,7 @@ button{
   place-items: strecth;
   background-color: rgba(0, 0, 0, 0.2);
   color: var(--braco1);
+  max-height: min-content;
   /* max-width: max-content; */
 }
 
@@ -222,28 +234,32 @@ button{
   position: relative;
   bottom: 2.2rem;
   left: 15rem;
+  background-color: transparent;
 }
 
 /* Top Filmes */
 
-.topFilmes{
+.topFilmes, .filmesGerais{
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(10.5rem, 10.5rem));
   grid-template-rows: 18.8rem;
+  gap: 1rem;
+}
+
+.filmesGerais{
+  grid-template-rows: repeat(3, minmax(18.8rem, 18.8rem));
 }
 
 .loja h2{
   color: var(--cor-de-texto);
   margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .filmes{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image:  linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(./imagens/joker.png);
-  background-repeat: no-repeat;
-  min-width: inherit;
 }
 
 .favoritar{
@@ -281,3 +297,24 @@ button{
   margin: 8px 4px;
   font-size: 12px;
 }
+
+/* Filmes */
+.filtros{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(10.5rem, 10.5rem));
+    gap: 1rem;
+}
+
+.filmes2 button{
+  text-align: center;
+  min-width: 10.5rem;
+  min-height: 2.37rem;
+  border: 2px solid var(--preto2);
+  margin-bottom: 2.62rem;
+}
+
+.selecionado{
+  color: var(--rosa-violeta);
+  background: var(--rosa-violeta2);
+}
+
